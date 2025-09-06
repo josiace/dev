@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}acceuil{%  endblock%}
+
+
+{% block body %}
+
+    <h1>bienvenue sur <span>DECEL</span></h1>
+
+
+
+    {% for blo in blogs%}
+<div style=" background: rgb(171, 171, 171); border-radius: 5px;">
+    <div>
+        <h2>{{blo.titre}}</h2>
+    </div>
+    <div class="contenu">{{blo.contenus}}</div>
+    <div class="auteur">{{blo.auteur}}</div>
+    <div >{{blo.mail}}</div>
+ 
+</div>    
+    {% endfor %}
+
+{% endblock %}

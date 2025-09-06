@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: django-app
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn config.wsgi:application"
+    envVars:
+      - key: SECRET_KEY
+        value: "django-insecure-2$n9m&n*k#2%qx3khy3lazahylvjx(282%4-r-n_q8(67z_a_k"
